@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://n6hmpll5k0j7"]
+
+[ext_resource type="Script" path="res://scripts/autoloads/global_music/GlobalPlaylist.gd" id="1_fspts"]
+
+[node name="GlobalPlaylist" type="Node"]
+process_mode = 3
+script = ExtResource("1_fspts")

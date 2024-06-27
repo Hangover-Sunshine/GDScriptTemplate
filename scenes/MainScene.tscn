@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://5mpw8kapddme"]
+
+[node name="MainScene" type="Node"]
+
+[node name="StayFadedTimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="TransitionPlayer" type="AnimationPlayer" parent="."]
