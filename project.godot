@@ -19,12 +19,24 @@ config/icon="res://_SYSTEM/HS_DesktopIcon.png"
 [audio]
 
 buses/default_bus_layout="res://assets/AudioBusLayout.tres"
+manager/sound/bus="Sound"
+manager/sound/pool_1D_size=16
+manager/sound/pool_2D_size=16
+manager/sound/pool_3D_size=16
+manager/sound/max_polyphony=32
+manager/music/bus="Music"
 
 [autoload]
 
 GlobalSignals="*res://scripts/autoloads/GlobalSignals.gd"
 GlobalPlaylist="*res://scripts/autoloads/global_music/GlobalPlaylist.tscn"
 GlobalSettings="*res://scripts/autoloads/GlobalSettings.gd"
+SoundManager="*res://addons/resonate/sound_manager/sound_manager.gd"
+MusicManager="*res://addons/resonate/music_manager/music_manager.gd"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/resonate/plugin.cfg")
 
 [file_customization]
 
