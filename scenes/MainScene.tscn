@@ -1,22 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://5mpw8kapddme"]
+[gd_scene load_steps=3 format=3 uid="uid://5mpw8kapddme"]
 
 [ext_resource type="Script" path="res://scripts/system/SceneTransitionController.gd" id="1_5oktl"]
 
-[sub_resource type="Animation" id="Animation_2xrw1"]
-resource_name = "Fade"
-
-[sub_resource type="Animation" id="Animation_vesxw"]
-resource_name = "Turpid"
-
-[sub_resource type="Animation" id="Animation_llr7f"]
-resource_name = "Cross-Fade"
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_rnb4p"]
-_data = {
-"Cross-Fade": SubResource("Animation_llr7f"),
-"Fade": SubResource("Animation_2xrw1"),
-"Turpid": SubResource("Animation_vesxw")
-}
 
 [node name="MainScene" type="Node"]
 script = ExtResource("1_5oktl")

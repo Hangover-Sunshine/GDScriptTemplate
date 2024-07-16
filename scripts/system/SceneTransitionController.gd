@@ -29,6 +29,7 @@ var fade_completed:bool = false
 
 func _ready():
 	GlobalSignals.connect("load_scene", _load_scene)
+	GlobalSignals.connect("load_scene_with_anim", _load_scene_with_anim)
 	MusicManager.loaded.connect(on_music_manager_loaded)
 	
 	# TODO: Inform Godot this is bad and I should just be able to get a list of
@@ -42,7 +43,11 @@ func _ready():
 	##
 	
 	if DefaultTransitionAnim == "":
-		DefaultTransitionAnim = transition_anims[0]
+		if len(transition_anims) > 0:
+			DefaultTransitionAnim = transition_anims[0]
+		else:
+			printerr("Error: no animations detected in transition animation player!")
+		##
 	else:
 		var found:bool = false
 		for ta in transition_anims:
@@ -107,6 +112,27 @@ func _process(_delta):
 ##
 
 func _load_scene(scene:String):
+	_load_scene_with_anim(scene, DefaultTransitionAnim)
+##
+
+func _load_scene_with_anim(scene:String, anim_name:String):
+	if anim_name != DefaultTransitionAnim:
+		var found:bool = false
+		for ta in transition_anims:
+			if ta.to_lower() == anim_name.to_lower():
+				found = true
+				anim_name = ta
+				break
+			##
+		##
+		
+		if found == false:
+			printerr("Error: '%s' was not found, defaulting to '%s'!" %
+				[anim_name, DefaultTransitionAnim])
+			anim_name = DefaultTransitionAnim
+		##
+	##
+	
 	scene_path = "res://" + scene_folder_path + scene + ".tscn"
 	scene_name = scene
 	
