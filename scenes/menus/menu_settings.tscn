@@ -21,7 +21,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Settings_MC/Settings_VBox/Tab_Vbox/Tab_Panel/Control_Tab_Vbox:visible")
+tracks/1/path = NodePath("Settings_MC/Settings_VBox/Tab_Vbox/Tab_Panel/Audio_Tab_Vbox:visible")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -49,7 +49,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Settings_MC/Settings_VBox/Tab_Vbox/Tab_Panel/Control_Tab_Vbox:visible")
+tracks/1/path = NodePath("Settings_MC/Settings_VBox/Tab_Vbox/Tab_Panel/Audio_Tab_Vbox:visible")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -77,7 +77,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Settings_MC/Settings_VBox/Tab_Vbox/Tab_Panel/Control_Tab_Vbox:visible")
+tracks/1/path = NodePath("Settings_MC/Settings_VBox/Tab_Vbox/Tab_Panel/Audio_Tab_Vbox:visible")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -132,7 +132,7 @@ text = " General "
 [node name="Opt_Cont_Butt" type="Button" parent="Settings_MC/Settings_VBox/Tab_Vbox/Tab_HBox"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
-text = " Controls "
+text = " Sound "
 
 [node name="Tab_Panel" type="Panel" parent="Settings_MC/Settings_VBox/Tab_Vbox"]
 custom_minimum_size = Vector2(1800, 750)
@@ -265,80 +265,7 @@ size_flags_horizontal = 10
 theme_override_icons/checked = ExtResource("1_qe0ko")
 theme_override_icons/unchecked = ExtResource("2_62cxx")
 
-[node name="Audio_VBox" type="VBoxContainer" parent="Settings_MC/Settings_VBox/Tab_Vbox/Tab_Panel/Gen_Tab_Hbox/Bot_Hbox"]
-layout_mode = 2
-theme_override_constants/separation = 25
-
-[node name="Audio_Label" type="Label" parent="Settings_MC/Settings_VBox/Tab_Vbox/Tab_Panel/Gen_Tab_Hbox/Bot_Hbox/Audio_VBox"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 50
-text = "AUDIO"
-horizontal_alignment = 1
-
-[node name="Overall_HBox" type="HBoxContainer" parent="Settings_MC/Settings_VBox/Tab_Vbox/Tab_Panel/Gen_Tab_Hbox/Bot_Hbox/Audio_VBox"]
-layout_mode = 2
-theme_override_constants/separation = 25
-alignment = 1
-
-[node name="Overall_Label" type="Label" parent="Settings_MC/Settings_VBox/Tab_Vbox/Tab_Panel/Gen_Tab_Hbox/Bot_Hbox/Audio_VBox/Overall_HBox"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 50
-text = "Overall"
-
-[node name="Overall_Slider" type="HSlider" parent="Settings_MC/Settings_VBox/Tab_Vbox/Tab_Panel/Gen_Tab_Hbox/Bot_Hbox/Audio_VBox/Overall_HBox"]
-custom_minimum_size = Vector2(500, 75)
-layout_mode = 2
-size_flags_vertical = 4
-value = 100.0
-
-[node name="Overall_Percent" type="Label" parent="Settings_MC/Settings_VBox/Tab_Vbox/Tab_Panel/Gen_Tab_Hbox/Bot_Hbox/Audio_VBox/Overall_HBox"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 50
-text = "100%"
-
-[node name="SFX_HBox" type="HBoxContainer" parent="Settings_MC/Settings_VBox/Tab_Vbox/Tab_Panel/Gen_Tab_Hbox/Bot_Hbox/Audio_VBox"]
-layout_mode = 2
-theme_override_constants/separation = 25
-alignment = 1
-
-[node name="SFX_Label" type="Label" parent="Settings_MC/Settings_VBox/Tab_Vbox/Tab_Panel/Gen_Tab_Hbox/Bot_Hbox/Audio_VBox/SFX_HBox"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 50
-text = "Effects"
-
-[node name="SFX_Slider" type="HSlider" parent="Settings_MC/Settings_VBox/Tab_Vbox/Tab_Panel/Gen_Tab_Hbox/Bot_Hbox/Audio_VBox/SFX_HBox"]
-custom_minimum_size = Vector2(500, 75)
-layout_mode = 2
-size_flags_vertical = 4
-value = 100.0
-
-[node name="SFX_Percent" type="Label" parent="Settings_MC/Settings_VBox/Tab_Vbox/Tab_Panel/Gen_Tab_Hbox/Bot_Hbox/Audio_VBox/SFX_HBox"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 50
-text = "100%"
-
-[node name="Music_HBox" type="HBoxContainer" parent="Settings_MC/Settings_VBox/Tab_Vbox/Tab_Panel/Gen_Tab_Hbox/Bot_Hbox/Audio_VBox"]
-layout_mode = 2
-theme_override_constants/separation = 25
-alignment = 1
-
-[node name="Music_Label" type="Label" parent="Settings_MC/Settings_VBox/Tab_Vbox/Tab_Panel/Gen_Tab_Hbox/Bot_Hbox/Audio_VBox/Music_HBox"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 50
-text = "Music"
-
-[node name="Music_Slider" type="HSlider" parent="Settings_MC/Settings_VBox/Tab_Vbox/Tab_Panel/Gen_Tab_Hbox/Bot_Hbox/Audio_VBox/Music_HBox"]
-custom_minimum_size = Vector2(500, 75)
-layout_mode = 2
-size_flags_vertical = 4
-value = 100.0
-
-[node name="Music_Percent" type="Label" parent="Settings_MC/Settings_VBox/Tab_Vbox/Tab_Panel/Gen_Tab_Hbox/Bot_Hbox/Audio_VBox/Music_HBox"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 50
-text = "100%"
-
-[node name="Control_Tab_Vbox" type="VBoxContainer" parent="Settings_MC/Settings_VBox/Tab_Vbox/Tab_Panel"]
+[node name="Audio_Tab_Vbox" type="VBoxContainer" parent="Settings_MC/Settings_VBox/Tab_Vbox/Tab_Panel"]
 visible = false
 custom_minimum_size = Vector2(1800, 750)
 layout_mode = 0
@@ -347,17 +274,78 @@ offset_bottom = 750.0
 theme_override_constants/separation = -15
 alignment = 1
 
-[node name="Placeholder_Label" type="Label" parent="Settings_MC/Settings_VBox/Tab_Vbox/Tab_Panel/Control_Tab_Vbox"]
+[node name="Audio_VBox" type="VBoxContainer" parent="Settings_MC/Settings_VBox/Tab_Vbox/Tab_Panel/Audio_Tab_Vbox"]
+layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="Audio_Label" type="Label" parent="Settings_MC/Settings_VBox/Tab_Vbox/Tab_Panel/Audio_Tab_Vbox/Audio_VBox"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
-text = "IF ONLY WE HAD A"
+text = "AUDIO"
 horizontal_alignment = 1
 
-[node name="Placeholder_Label2" type="Label" parent="Settings_MC/Settings_VBox/Tab_Vbox/Tab_Panel/Control_Tab_Vbox"]
+[node name="Overall_HBox" type="HBoxContainer" parent="Settings_MC/Settings_VBox/Tab_Vbox/Tab_Panel/Audio_Tab_Vbox/Audio_VBox"]
+layout_mode = 2
+theme_override_constants/separation = 25
+alignment = 1
+
+[node name="Overall_Label" type="Label" parent="Settings_MC/Settings_VBox/Tab_Vbox/Tab_Panel/Audio_Tab_Vbox/Audio_VBox/Overall_HBox"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
-text = "KEYBINDING SECTION HERE"
-horizontal_alignment = 1
+text = "Overall"
+
+[node name="Overall_Slider" type="HSlider" parent="Settings_MC/Settings_VBox/Tab_Vbox/Tab_Panel/Audio_Tab_Vbox/Audio_VBox/Overall_HBox"]
+custom_minimum_size = Vector2(500, 75)
+layout_mode = 2
+size_flags_vertical = 4
+value = 100.0
+
+[node name="Overall_Percent" type="Label" parent="Settings_MC/Settings_VBox/Tab_Vbox/Tab_Panel/Audio_Tab_Vbox/Audio_VBox/Overall_HBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "100%"
+
+[node name="SFX_HBox" type="HBoxContainer" parent="Settings_MC/Settings_VBox/Tab_Vbox/Tab_Panel/Audio_Tab_Vbox/Audio_VBox"]
+layout_mode = 2
+theme_override_constants/separation = 25
+alignment = 1
+
+[node name="SFX_Label" type="Label" parent="Settings_MC/Settings_VBox/Tab_Vbox/Tab_Panel/Audio_Tab_Vbox/Audio_VBox/SFX_HBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Effects"
+
+[node name="SFX_Slider" type="HSlider" parent="Settings_MC/Settings_VBox/Tab_Vbox/Tab_Panel/Audio_Tab_Vbox/Audio_VBox/SFX_HBox"]
+custom_minimum_size = Vector2(500, 75)
+layout_mode = 2
+size_flags_vertical = 4
+value = 100.0
+
+[node name="SFX_Percent" type="Label" parent="Settings_MC/Settings_VBox/Tab_Vbox/Tab_Panel/Audio_Tab_Vbox/Audio_VBox/SFX_HBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "100%"
+
+[node name="Music_HBox" type="HBoxContainer" parent="Settings_MC/Settings_VBox/Tab_Vbox/Tab_Panel/Audio_Tab_Vbox/Audio_VBox"]
+layout_mode = 2
+theme_override_constants/separation = 25
+alignment = 1
+
+[node name="Music_Label" type="Label" parent="Settings_MC/Settings_VBox/Tab_Vbox/Tab_Panel/Audio_Tab_Vbox/Audio_VBox/Music_HBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Music"
+
+[node name="Music_Slider" type="HSlider" parent="Settings_MC/Settings_VBox/Tab_Vbox/Tab_Panel/Audio_Tab_Vbox/Audio_VBox/Music_HBox"]
+custom_minimum_size = Vector2(500, 75)
+layout_mode = 2
+size_flags_vertical = 4
+value = 100.0
+
+[node name="Music_Percent" type="Label" parent="Settings_MC/Settings_VBox/Tab_Vbox/Tab_Panel/Audio_Tab_Vbox/Audio_VBox/Music_HBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "100%"
 
 [node name="Back_Button" type="Button" parent="Settings_MC/Settings_VBox"]
 layout_mode = 2
