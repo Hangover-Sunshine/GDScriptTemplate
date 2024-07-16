@@ -5,7 +5,10 @@ extends Node
 @export var curr_scene:Node
 
 @export_category("Transition Fade")
-@export var FadeAnimationName:Array[String] = ["Fade"]
+## The default name of the animation string. Leave blank to be set automatically
+##	when the game starts. This will be the alphabetical zeroth (e.g., "A" comes before "B").
+##	Will also auto-default to alphabetical zeroth if animation doesn't exist.
+@export var DefaultTransitionAnim:String
 @export var PlayFadeFully:bool = false
 @export var StayFaded:bool = false
 @export var StayFadedTime:float = 2.5
@@ -13,6 +16,8 @@ extends Node
 
 @onready var transition_player:AnimationPlayer = $TransitionPlayer
 @onready var StayFadedTimer:Timer = $StayFadedTimer
+
+var transition_anims:PackedStringArray
 
 var undo_load_overlay:bool = false
 
@@ -22,10 +27,38 @@ var scene_path:String
 var fade_in:bool = false
 var fade_completed:bool = false
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
 	GlobalSignals.connect("load_scene", _load_scene)
 	MusicManager.loaded.connect(on_music_manager_loaded)
+	
+	# TODO: Inform Godot this is bad and I should just be able to get a list of
+	#	all animations rather than peek into the property list (which may break in
+	#	an update)
+	for prop in transition_player.get_property_list():
+		if prop["name"] == "current_animation":
+			transition_anims = str(prop["hint_string"]).split(",")
+			transition_anims.remove_at(0) # remove [stop]
+		##
+	##
+	
+	if DefaultTransitionAnim == "":
+		DefaultTransitionAnim = transition_anims[0]
+	else:
+		var found:bool = false
+		for ta in transition_anims:
+			if ta.to_lower() == DefaultTransitionAnim.to_lower():
+				found = true
+				DefaultTransitionAnim = ta
+				break
+			##
+		##
+		
+		if found == false:
+			printerr("Error: '%s' was not found, defaulting to '%s'!" %
+				[DefaultTransitionAnim, transition_anims[0]])
+			DefaultTransitionAnim = transition_anims[0]
+		##
+	##
 ##
 
 func _process(_delta):
@@ -111,5 +144,7 @@ func _on_transition_player_animation_finished(anim_name):
 func on_music_manager_loaded():
 	# Resonate has completed loading, good to load the game from here
 	set_process(false)
-	transition_player.play("Fade")
+	# TODO: Replace with transition events -- maybe I don't want to use the default
+	#		on load?
+	transition_player.play(DefaultTransitionAnim)
 ##
