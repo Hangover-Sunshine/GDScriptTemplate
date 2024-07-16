@@ -1,6 +1,9 @@
-[gd_scene format=3 uid="uid://5mpw8kapddme"]
+[gd_scene load_steps=2 format=3 uid="uid://5mpw8kapddme"]
+
+[ext_resource type="Script" path="res://scripts/system/SceneTransitionController.gd" id="1_5oktl"]
 
 [node name="MainScene" type="Node"]
+script = ExtResource("1_5oktl")
 
 [node name="StayFadedTimer" type="Timer" parent="."]
 one_shot = true
