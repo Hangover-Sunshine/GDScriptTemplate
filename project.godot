@@ -33,6 +33,16 @@ GlobalSettings="*res://scripts/autoloads/GlobalSettings.gd"
 SoundManager="*res://addons/resonate/sound_manager/sound_manager.gd"
 MusicManager="*res://addons/resonate/music_manager/music_manager.gd"
 
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+window/stretch/mode="viewport"
+
+[dotnet]
+
+project/assembly_name="GDScriptTemplate"
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/resonate/plugin.cfg")
