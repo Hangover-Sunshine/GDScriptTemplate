@@ -403,3 +403,8 @@ libraries = {
 "": SubResource("AnimationLibrary_kjsdy")
 }
 autoplay = "ToDisclaimer"
+
+[node name="MenuTimer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="MenuTimer" to="." method="_on_menu_timer_timeout"]

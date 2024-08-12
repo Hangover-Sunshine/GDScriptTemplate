@@ -6,23 +6,38 @@ extends Node2D
 @onready var menu_pregame = $MenuPregame
 @onready var menu_settings = $MenuSettings
 @onready var animplayer = $HubMenu_AnimPlayer
+@onready var menu_timer = $MenuTimer
 
+# manages the amount of seconds it takes to flip off of the specific menu page #
+@export var time_disclaim = 4
+@export var time_splash = 2
+
+@onready var ready_to_click = false
 var was_disclaimed = false
 
-# Called when the node enters the scene tree for the first time.
+# called when the node enters the scene tree for the first time. #
 func _ready():
 	if was_disclaimed == false:
 		animplayer.play("ToDisclaimer")
+		menu_timer.wait_time = time_disclaim
+		menu_timer.start()
 	elif was_disclaimed == true:
 		animplayer.play("ToSplash")
+		menu_timer.wait_time = time_splash
+		menu_timer.start()
 	
 	handle_signals()
 
+# manages page flipping for any button press. Keeps MenuTimer in mind to delay instant flipping #
 func _input(event):
-	if event.is_pressed() and menu_splash.visible == true and menu_disclaimer.visible == false:
+	if event.is_pressed() and menu_splash.visible == true and menu_disclaimer.visible == false and ready_to_click == true:
 		to_main()
-	elif event.is_pressed() and menu_splash.visible == false and menu_disclaimer.visible == true:
+		ready_to_click = false
+	elif event.is_pressed() and menu_splash.visible == false and menu_disclaimer.visible == true and ready_to_click == true:
 		to_splash()
+		menu_timer.wait_time = time_splash
+		menu_timer.start()
+		ready_to_click = false
 
 func handle_signals():
 	menu_disclaimer.was_disclaimed.connect(disclaimed)
@@ -35,7 +50,7 @@ func handle_signals():
 	GlobalSignals.connect("scene_loaded", to_free)
 
 func disclaimed():
-	was_disclaimed == true
+	was_disclaimed = true
 
 func to_splash():
 	animplayer.play("ToSplash")
@@ -57,3 +72,6 @@ func to_load():
 
 func to_free(scene_name):
 	self.queue_free()
+
+func _on_menu_timer_timeout():
+	ready_to_click = true
