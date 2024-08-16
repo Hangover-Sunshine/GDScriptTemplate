@@ -47,7 +47,7 @@ func handle_signals():
 	menu_pregame.pregame_to_main.connect(to_main)
 	menu_pregame.pregame_to_game.connect(to_load)
 	menu_settings.settings_to_main.connect(to_main)
-	GlobalSignals.connect("scene_loaded", to_free)
+	Verho.connect("loaded_scene", to_free)
 
 func disclaimed():
 	was_disclaimed = true
@@ -68,9 +68,9 @@ func to_exit():
 	get_tree().quit()
 
 func to_load():
-	GlobalSignals.emit_signal("load_scene", "DummySceneA")
+	Verho.emit_signal("load_scene", "DummySceneA")
 
-func to_free(scene_name):
+func to_free(_scene_name):
 	self.queue_free()
 
 func _on_menu_timer_timeout():

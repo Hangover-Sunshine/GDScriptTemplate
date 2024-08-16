@@ -12,7 +12,7 @@ func handle_signals():
 	menu_pause.pause_to_settings.connect(to_settings)
 	menu_settings.settings_to_main.connect(to_pause)
 	menu_pause.pause_to_main.connect(to_load)
-	GlobalSignals.connect("scene_loaded", to_free)
+	Verho.connect("loaded_scene", to_free)
 
 func to_game():
 	print("The game is unpaused.")
@@ -24,7 +24,7 @@ func to_settings():
 	animplayer.play("ToSettings")
 
 func to_load():
-	GlobalSignals.emit_signal("load_scene", "menus/hub_menu")
+	Verho.emit_signal("load_scene", "menus/hub_menu")
 
 func to_free(scene_name):
 	self.queue_free()

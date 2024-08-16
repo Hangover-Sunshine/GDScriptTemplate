@@ -6,7 +6,7 @@ signal load_new_scene(scene_name:String)
 ## Emitted once a scene is loaded and about to be added to the SceneTree.
 signal loaded_scene(scene_name:String)
 ## Emitted once a scene is added to the SceneTree.
-signal added_to_scene(scene_name:String)
+signal added_scene(scene_name:String)
 ## Signal emitted when a transition has finished "going in" -- i.e., the screen is visible.
 signal faded_in
 ## Signal emitted when a transition has finished "going out" -- i.e., the screen is obscured.

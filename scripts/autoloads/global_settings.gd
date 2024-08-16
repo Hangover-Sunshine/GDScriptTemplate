@@ -67,8 +67,6 @@ func _ready():
 ##
 
 func save_settings():
-	var data = {}
-	
 	# otherwise, save a new config file with our defaults in place
 	config.set_value("volume", "master", MasterVolume)
 	config.set_value("volume", "sfx_master", MasterSFXVolume)
