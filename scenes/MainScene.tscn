@@ -1,16 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://5mpw8kapddme"]
+[gd_scene load_steps=2 format=3 uid="uid://5mpw8kapddme"]
 
-[ext_resource type="Script" path="res://scripts/system/SceneTransitionController.gd" id="1_5oktl"]
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_rnb4p"]
+[ext_resource type="Script" path="res://addons/verho/resources/TransitionBank.gd" id="1_b184l"]
 
 [node name="MainScene" type="Node"]
-script = ExtResource("1_5oktl")
 
-[node name="StayFadedTimer" type="Timer" parent="."]
-one_shot = true
-
-[node name="TransitionPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_rnb4p")
-}
+[node name="TransitionBank" type="Node" parent="."]
+script = ExtResource("1_b184l")
