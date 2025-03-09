@@ -275,13 +275,13 @@ horizontal_alignment = 1
 [node name="Text_AnimPlayer" type="AnimationPlayer" parent="."]
 root_node = NodePath("../Disclaimer_MC")
 libraries = {
-"": SubResource("AnimationLibrary_2c7oi")
+&"": SubResource("AnimationLibrary_2c7oi")
 }
 autoplay = "Flash"
 
 [node name="Fade_AnimPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_3qj48")
+&"": SubResource("AnimationLibrary_3qj48")
 }
 autoplay = "FadeIn"
 
