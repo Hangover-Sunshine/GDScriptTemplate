@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cdx15nqmqr1cu"]
 
-[ext_resource type="Script" path="res://scripts/menus/menu_pregame.gd" id="1_3jfox"]
+[ext_resource type="Script" uid="uid://wcnpltvq61c3" path="res://scripts/menus/menu_pregame.gd" id="1_3jfox"]
 
 [node name="MenuPregame" type="Control"]
 layout_mode = 3

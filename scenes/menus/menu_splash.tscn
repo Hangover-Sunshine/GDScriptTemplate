@@ -34,8 +34,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_2c7oi"]
 _data = {
-"Flash": SubResource("Animation_ps85c"),
-"RESET": SubResource("Animation_oshcs")
+&"Flash": SubResource("Animation_ps85c"),
+&"RESET": SubResource("Animation_oshcs")
 }
 
 [node name="MenuSplash" type="Control"]

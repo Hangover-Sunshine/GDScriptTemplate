@@ -1,7 +1,7 @@
 [gd_scene load_steps=14 format=3 uid="uid://d136umhx2ffrh"]
 
 [ext_resource type="PackedScene" uid="uid://88fivnqio2ad" path="res://scenes/menus/menu_splash.tscn" id="1_5dhbp"]
-[ext_resource type="Script" path="res://scripts/menus/hub_menu.gd" id="1_eqpse"]
+[ext_resource type="Script" uid="uid://y2eu3mf4a2bu" path="res://scripts/menus/hub_menu.gd" id="1_eqpse"]
 [ext_resource type="PackedScene" uid="uid://p6rcqo7jdo2r" path="res://scenes/menus/menu_disclaimer.tscn" id="2_1n5cx"]
 [ext_resource type="PackedScene" uid="uid://craw6cydplqpm" path="res://scenes/menus/menu_main.tscn" id="2_urtgt"]
 [ext_resource type="PackedScene" uid="uid://cdx15nqmqr1cu" path="res://scenes/menus/menu_pregame.tscn" id="3_36hlv"]
@@ -367,12 +367,12 @@ tracks/5/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_kjsdy"]
 _data = {
-"RESET": SubResource("Animation_xv0je"),
-"ToDisclaimer": SubResource("Animation_mana2"),
-"ToMain": SubResource("Animation_g6qxg"),
-"ToPregame": SubResource("Animation_wneh0"),
-"ToSettings": SubResource("Animation_7aget"),
-"ToSplash": SubResource("Animation_domie")
+&"RESET": SubResource("Animation_xv0je"),
+&"ToDisclaimer": SubResource("Animation_mana2"),
+&"ToMain": SubResource("Animation_g6qxg"),
+&"ToPregame": SubResource("Animation_wneh0"),
+&"ToSettings": SubResource("Animation_7aget"),
+&"ToSplash": SubResource("Animation_domie")
 }
 
 [node name="HubMenu" type="Node2D"]
@@ -400,7 +400,7 @@ visible = false
 
 [node name="HubMenu_AnimPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_kjsdy")
+&"": SubResource("AnimationLibrary_kjsdy")
 }
 autoplay = "ToDisclaimer"
 
