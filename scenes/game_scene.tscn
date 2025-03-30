@@ -7,11 +7,12 @@
 process_mode = 3
 script = ExtResource("1_onqr8")
 
-[node name="PauserLayer" type="CanvasLayer" parent="."]
+[node name="PauseLayer" type="CanvasLayer" parent="."]
+unique_name_in_owner = true
 process_mode = 2
-layer = 128
+layer = 127
 visible = false
 
-[node name="HubPause" parent="PauserLayer" instance=ExtResource("1_w5aja")]
+[node name="HubPause" parent="PauseLayer" instance=ExtResource("1_w5aja")]
 
-[connection signal="unpause_button_pressed" from="PauserLayer/HubPause" to="." method="pause_unpause"]
+[connection signal="unpause_button_pressed" from="PauseLayer/HubPause" to="." method="pause_unpause"]

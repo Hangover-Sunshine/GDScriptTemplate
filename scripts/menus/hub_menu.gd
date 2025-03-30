@@ -16,6 +16,8 @@ extends Node2D
 
 # called when the node enters the scene tree for the first time. #
 func _ready():
+	get_tree().paused = false
+	
 	if PlayerPrefs.HasBeenDisclaimed == false:
 		animplayer.play("ToDisclaimer")
 		menu_timer.wait_time = time_disclaim
@@ -50,6 +52,7 @@ func handle_signals():
 	menu_pregame.pregame_to_main.connect(to_main)
 	menu_pregame.pregame_to_game.connect(to_load)
 	menu_settings.settings_to_main.connect(to_main)
+	Verho.added_scene.connect(to_free)
 ##
 
 func disclaimed():
@@ -77,11 +80,14 @@ func to_exit():
 ##
 
 func to_load():
-	pass
+	Verho.change_scene("res://scenes/game_scene.tscn",
+						"res://prefabs/transitions/fade_to_black.tscn")
 ##
 
-func to_free(_scene_name):
-	self.queue_free()
+func to_free(scene):
+	if scene != self:
+		queue_free()
+	##
 ##
 
 func _on_menu_timer_timeout():

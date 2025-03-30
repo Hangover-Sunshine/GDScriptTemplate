@@ -30,5 +30,6 @@ func to_settings():
 ##
 
 func to_load():
-	pass
+	Verho.change_scene("res://scenes/menus/hub_menu.tscn",
+						"res://prefabs/transitions/fade_to_black.tscn")
 ##

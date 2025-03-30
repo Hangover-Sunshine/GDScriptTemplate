@@ -109,5 +109,5 @@ visible = false
 
 [node name="HubPause_AnimPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_0e1jm")
+&"": SubResource("AnimationLibrary_0e1jm")
 }
