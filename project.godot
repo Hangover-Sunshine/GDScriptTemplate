@@ -32,6 +32,7 @@ manager/music/bus="Music"
 GlobalSignals="*res://scripts/autoloads/global_signals.gd"
 GlobalSettings="*res://scripts/autoloads/global_settings.gd"
 PlayerPrefs="*res://scripts/autoloads/player_prefs.gd"
+Verho="*res://addons/verho/verho/verho.tscn"
 
 [debug]
 
@@ -47,6 +48,10 @@ window/stretch/mode="viewport"
 [dotnet]
 
 project/assembly_name="GDScriptTemplate"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/verho/plugin.cfg")
 
 [file_customization]
 
