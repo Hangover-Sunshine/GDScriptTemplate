@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bja6gbhoy51vf"
-path="res://.godot/imported/HS_DesktopIcon.png-c998446b15007ffd53be49a5fc7b9da6.ctex"
+uid="uid://wfqudke3md4u"
+path="res://.godot/imported/spade_outline.png-8da37b789bcf789a09a9b59e45bfb9fe.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://_SYSTEM/HS_DesktopIcon.png"
-dest_files=["res://.godot/imported/HS_DesktopIcon.png-c998446b15007ffd53be49a5fc7b9da6.ctex"]
+source_file="res://assets/particles/spade_outline.png"
+dest_files=["res://.godot/imported/spade_outline.png-8da37b789bcf789a09a9b59e45bfb9fe.ctex"]
 
 [params]
 
