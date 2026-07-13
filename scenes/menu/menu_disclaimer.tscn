@@ -1,0 +1,95 @@
+[gd_scene format=3 uid="uid://c4fhq77wd2p7q"]
+
+[ext_resource type="FontFile" uid="uid://d4b72cscrvyt5" path="res://assets/fonts/brand/Quicksand-Bold.ttf" id="1_b2mox"]
+[ext_resource type="FontFile" uid="uid://bfafpfpixsbvq" path="res://assets/fonts/brand/Quicksand-Regular.ttf" id="2_55v7k"]
+[ext_resource type="FontFile" uid="uid://2ijoap0bi75w" path="res://assets/fonts/brand/Quicksand-SemiBold.ttf" id="3_xlnbf"]
+[ext_resource type="Texture2D" uid="uid://t5lws023bp4e" path="res://assets/particles/key.png" id="4_55v7k"]
+
+[node name="MenuDisclaimer" type="Control" unique_id=1396044059]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MC" type="MarginContainer" parent="." unique_id=1365604503]
+custom_minimum_size = Vector2(1920, 1080)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 64
+theme_override_constants/margin_top = 64
+theme_override_constants/margin_right = 64
+theme_override_constants/margin_bottom = 64
+
+[node name="VBox_Labels" type="VBoxContainer" parent="MC" unique_id=33715671]
+layout_mode = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="Label_Header" type="Label" parent="MC/VBox_Labels" unique_id=1386907803]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_b2mox")
+theme_override_font_sizes/font_size = 150
+text = "CONTENT WARNING"
+horizontal_alignment = 1
+
+[node name="RTL_Body" type="RichTextLabel" parent="MC/VBox_Labels" unique_id=1212076117]
+propagate_maximum_size = true
+clip_contents = false
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("2_55v7k")
+theme_override_fonts/bold_font = ExtResource("3_xlnbf")
+theme_override_font_sizes/normal_font_size = 50
+theme_override_font_sizes/bold_font_size = 50
+bbcode_enabled = true
+text = "[b]GAME[/b] may have themes and gameplay
+that may be triggering. Please review the following
+content warnings below before continuing:"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+
+[node name="RTL_List" type="RichTextLabel" parent="MC/VBox_Labels" unique_id=1526949488]
+propagate_maximum_size = true
+clip_contents = false
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("2_55v7k")
+theme_override_fonts/bold_font = ExtResource("3_xlnbf")
+theme_override_font_sizes/normal_font_size = 50
+theme_override_font_sizes/bold_font_size = 50
+bbcode_enabled = true
+text = "[b]1.[/b] Warning 1
+[b]2.[/b] Warning 2
+[b]3.[/b] Warning 3
+[b]4.[/b] Warning 4
+"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="MC/VBox_Labels" unique_id=90884179]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+texture = ExtResource("4_55v7k")
+stretch_mode = 3
+
+[node name="RTL_Press" type="RichTextLabel" parent="MC/VBox_Labels" unique_id=1758454335]
+propagate_maximum_size = true
+clip_contents = false
+layout_mode = 2
+offset_transform_enabled = true
+offset_transform_position = Vector2(0, 10)
+theme_override_fonts/normal_font = ExtResource("2_55v7k")
+theme_override_fonts/bold_font = ExtResource("3_xlnbf")
+theme_override_font_sizes/normal_font_size = 50
+theme_override_font_sizes/bold_font_size = 50
+bbcode_enabled = true
+text = "Press [b]ANY BUTTON[/b] to [b]CONTINUE[/b]"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
