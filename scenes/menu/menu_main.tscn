@@ -1,0 +1,111 @@
+[gd_scene format=3 uid="uid://cm0pqdagvahmf"]
+
+[ext_resource type="FontFile" uid="uid://d4b72cscrvyt5" path="res://assets/fonts/brand/Quicksand-Bold.ttf" id="1_wyeju"]
+[ext_resource type="FontFile" uid="uid://bfafpfpixsbvq" path="res://assets/fonts/brand/Quicksand-Regular.ttf" id="2_d2s0i"]
+[ext_resource type="Theme" uid="uid://cjfq6l5xes4ra" path="res://assets/themes/menu/menu.tres" id="2_wyeju"]
+
+[node name="MenuMain" type="Control" unique_id=1396044059]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MC_Brand" type="MarginContainer" parent="." unique_id=1422787208]
+custom_minimum_size = Vector2(1920, 1080)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 64
+theme_override_constants/margin_top = 64
+theme_override_constants/margin_right = 64
+theme_override_constants/margin_bottom = 64
+
+[node name="VBox_Brand" type="VBoxContainer" parent="MC_Brand" unique_id=545991425]
+layout_mode = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="Label_Brand" type="Label" parent="MC_Brand/VBox_Brand" unique_id=1548104801]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_d2s0i")
+theme_override_font_sizes/font_size = 48
+text = "v1.0 | HANGOVER SUNSHINE"
+
+[node name="VBox_Gap" type="VBoxContainer" parent="MC_Brand/VBox_Brand" unique_id=1166481949]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="Label_Jam" type="Label" parent="MC_Brand/VBox_Brand" unique_id=692615877]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_d2s0i")
+theme_override_font_sizes/font_size = 48
+text = "JAM EDITION (name)"
+horizontal_alignment = 2
+
+[node name="MC_Main" type="MarginContainer" parent="." unique_id=1365604503]
+custom_minimum_size = Vector2(1920, 1080)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 64
+theme_override_constants/margin_top = 64
+theme_override_constants/margin_right = 64
+theme_override_constants/margin_bottom = 64
+
+[node name="VBox_Components" type="VBoxContainer" parent="MC_Main" unique_id=33715671]
+layout_mode = 2
+theme_override_constants/separation = 48
+alignment = 1
+
+[node name="Label_Header" type="Label" parent="MC_Main/VBox_Components" unique_id=1386907803]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_wyeju")
+theme_override_font_sizes/font_size = 150
+text = "GAME NAME"
+horizontal_alignment = 1
+
+[node name="VBox_Buttons" type="VBoxContainer" parent="MC_Main/VBox_Components" unique_id=652553662]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("2_wyeju")
+theme_override_constants/separation = 16
+
+[node name="Button_Play" type="Button" parent="MC_Main/VBox_Components/VBox_Buttons" unique_id=1589387770]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme = ExtResource("2_wyeju")
+text = "Play"
+
+[node name="Button_Settings" type="Button" parent="MC_Main/VBox_Components/VBox_Buttons" unique_id=2077305635]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme = ExtResource("2_wyeju")
+text = "Settings"
+
+[node name="Button_Leave" type="Button" parent="MC_Main/VBox_Components/VBox_Buttons" unique_id=1893636185]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme = ExtResource("2_wyeju")
+text = "Exit"
+
+[node name="HBox_Buttons" type="HBoxContainer" parent="MC_Main/VBox_Components" unique_id=1461624802]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 32
+alignment = 1
+
+[node name="NOTE_PickButtonVHBox" type="Node" parent="." unique_id=561834517]
