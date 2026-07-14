@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://drvkv6hs17vb2"]
+
+[ext_resource type="FontFile" uid="uid://d4b72cscrvyt5" path="res://assets/fonts/brand/Quicksand-Bold.ttf" id="1_ctx65"]
+[ext_resource type="FontFile" uid="uid://bfafpfpixsbvq" path="res://assets/fonts/brand/Quicksand-Regular.ttf" id="2_o3jc5"]
+
+[node name="GPPlaceholder" type="Control" unique_id=1746828289]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MC_GP" type="MarginContainer" parent="." unique_id=2121804019]
+custom_minimum_size = Vector2(1920, 1080)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBox_GP" type="VBoxContainer" parent="MC_GP" unique_id=1651767283]
+layout_mode = 2
+alignment = 1
+
+[node name="Label_Header" type="Label" parent="MC_GP/VBox_GP" unique_id=1924554029]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_ctx65")
+theme_override_font_sizes/font_size = 150
+text = "GAMEPLAY"
+horizontal_alignment = 1
+
+[node name="Label_Header2" type="Label" parent="MC_GP/VBox_GP" unique_id=933381487]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_o3jc5")
+theme_override_font_sizes/font_size = 75
+text = "LMB - Win / RMB - Lose"
+horizontal_alignment = 1

@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://cm0pqdagvahmf"]
 
+[ext_resource type="Script" uid="uid://di45epdlqeq8k" path="res://scenes/menu/main/menu_main.gd" id="1_d2s0i"]
 [ext_resource type="FontFile" uid="uid://d4b72cscrvyt5" path="res://assets/fonts/brand/Quicksand-Bold.ttf" id="1_wyeju"]
 [ext_resource type="FontFile" uid="uid://bfafpfpixsbvq" path="res://assets/fonts/brand/Quicksand-Regular.ttf" id="2_d2s0i"]
 [ext_resource type="Theme" uid="uid://cjfq6l5xes4ra" path="res://assets/themes/menu/menu.tres" id="2_wyeju"]
@@ -11,6 +12,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_d2s0i")
 
 [node name="MC_Brand" type="MarginContainer" parent="." unique_id=1422787208]
 custom_minimum_size = Vector2(1920, 1080)
@@ -94,7 +96,7 @@ layout_mode = 2
 theme = ExtResource("2_wyeju")
 text = "Settings"
 
-[node name="Button_Leave" type="Button" parent="MC_Main/VBox_Components/VBox_Buttons" unique_id=1893636185]
+[node name="Button_Exit" type="Button" parent="MC_Main/VBox_Components/VBox_Buttons" unique_id=1893636185]
 custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
 theme = ExtResource("2_wyeju")
@@ -109,3 +111,7 @@ theme_override_constants/separation = 32
 alignment = 1
 
 [node name="NOTE_PickButtonVHBox" type="Node" parent="." unique_id=561834517]
+
+[connection signal="pressed" from="MC_Main/VBox_Components/VBox_Buttons/Button_Play" to="." method="_on_button_play_pressed"]
+[connection signal="pressed" from="MC_Main/VBox_Components/VBox_Buttons/Button_Settings" to="." method="_on_button_settings_pressed"]
+[connection signal="pressed" from="MC_Main/VBox_Components/VBox_Buttons/Button_Exit" to="." method="_on_button_exit_pressed"]

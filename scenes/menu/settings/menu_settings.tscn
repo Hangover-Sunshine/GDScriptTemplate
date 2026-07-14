@@ -1,17 +1,19 @@
 [gd_scene format=3 uid="uid://f1si1e8apy0t"]
 
 [ext_resource type="FontFile" uid="uid://bfafpfpixsbvq" path="res://assets/fonts/brand/Quicksand-Regular.ttf" id="1_iey5m"]
+[ext_resource type="Script" uid="uid://cv7ehhn0inugg" path="res://scenes/menu/settings/menu_settings.gd" id="1_nwo61"]
 [ext_resource type="FontFile" uid="uid://d4b72cscrvyt5" path="res://assets/fonts/brand/Quicksand-Bold.ttf" id="2_jowka"]
 [ext_resource type="FontFile" uid="uid://bk2hnncwxg2oe" path="res://assets/fonts/brand/Quicksand-Medium.ttf" id="3_jowka"]
 [ext_resource type="Theme" uid="uid://cjfq6l5xes4ra" path="res://assets/themes/menu/menu.tres" id="3_nwo61"]
 
-[node name="MenuMain" type="Control" unique_id=1396044059]
+[node name="MenuSettings" type="Control" unique_id=1396044059]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_nwo61")
 
 [node name="MC_Brand" type="MarginContainer" parent="." unique_id=1422787208]
 custom_minimum_size = Vector2(1920, 1080)
@@ -51,7 +53,7 @@ theme_override_font_sizes/font_size = 48
 text = "JAM EDITION (name)"
 horizontal_alignment = 2
 
-[node name="MC_Main" type="MarginContainer" parent="." unique_id=1365604503]
+[node name="MC_Settings" type="MarginContainer" parent="." unique_id=1365604503]
 custom_minimum_size = Vector2(1920, 1080)
 layout_mode = 1
 anchors_preset = 15
@@ -64,12 +66,12 @@ theme_override_constants/margin_top = 64
 theme_override_constants/margin_right = 64
 theme_override_constants/margin_bottom = 64
 
-[node name="VBox_Components" type="VBoxContainer" parent="MC_Main" unique_id=33715671]
+[node name="VBox_Components" type="VBoxContainer" parent="MC_Settings" unique_id=33715671]
 layout_mode = 2
 theme_override_constants/separation = 25
 alignment = 1
 
-[node name="Label_Header" type="Label" parent="MC_Main/VBox_Components" unique_id=1386907803]
+[node name="Label_Header" type="Label" parent="MC_Settings/VBox_Components" unique_id=1386907803]
 layout_mode = 2
 offset_transform_enabled = true
 offset_transform_position = Vector2(0, 16)
@@ -78,15 +80,15 @@ theme_override_font_sizes/font_size = 96
 text = "SETTINGS"
 horizontal_alignment = 1
 
-[node name="VBox_Settings" type="VBoxContainer" parent="MC_Main/VBox_Components" unique_id=209319880]
+[node name="VBox_Settings" type="VBoxContainer" parent="MC_Settings/VBox_Components" unique_id=209319880]
 layout_mode = 2
 theme_override_constants/separation = 12
 
-[node name="VBox_Visual" type="VBoxContainer" parent="MC_Main/VBox_Components/VBox_Settings" unique_id=223760149]
+[node name="VBox_Visual" type="VBoxContainer" parent="MC_Settings/VBox_Components/VBox_Settings" unique_id=223760149]
 layout_mode = 2
 theme_override_constants/separation = -12
 
-[node name="Label_Visual" type="Label" parent="MC_Main/VBox_Components/VBox_Settings/VBox_Visual" unique_id=1844556235]
+[node name="Label_Visual" type="Label" parent="MC_Settings/VBox_Components/VBox_Settings/VBox_Visual" unique_id=1844556235]
 layout_mode = 2
 offset_transform_position = Vector2(0, 16)
 theme_override_fonts/font = ExtResource("2_jowka")
@@ -94,44 +96,44 @@ theme_override_font_sizes/font_size = 64
 text = "Visual"
 horizontal_alignment = 1
 
-[node name="HBox_Fullscreen" type="HBoxContainer" parent="MC_Main/VBox_Components/VBox_Settings/VBox_Visual" unique_id=1332159669]
+[node name="HBox_Fullscreen" type="HBoxContainer" parent="MC_Settings/VBox_Components/VBox_Settings/VBox_Visual" unique_id=1332159669]
 layout_mode = 2
 theme_override_constants/separation = 16
 alignment = 1
 
-[node name="Label_Fullscreen" type="Label" parent="MC_Main/VBox_Components/VBox_Settings/VBox_Visual/HBox_Fullscreen" unique_id=960119399]
+[node name="Label_Fullscreen" type="Label" parent="MC_Settings/VBox_Components/VBox_Settings/VBox_Visual/HBox_Fullscreen" unique_id=960119399]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_jowka")
 theme_override_font_sizes/font_size = 50
 text = "Fullscreen"
 
-[node name="CB_Fullscreen" type="CheckBox" parent="MC_Main/VBox_Components/VBox_Settings/VBox_Visual/HBox_Fullscreen" unique_id=2071493437]
+[node name="CB_Fullscreen" type="CheckBox" parent="MC_Settings/VBox_Components/VBox_Settings/VBox_Visual/HBox_Fullscreen" unique_id=2071493437]
 layout_mode = 2
 offset_transform_enabled = true
 offset_transform_scale = Vector2(0.7, 0.7)
 theme = ExtResource("3_nwo61")
 
-[node name="HBox_Option" type="HBoxContainer" parent="MC_Main/VBox_Components/VBox_Settings/VBox_Visual" unique_id=1345214887]
+[node name="HBox_Option" type="HBoxContainer" parent="MC_Settings/VBox_Components/VBox_Settings/VBox_Visual" unique_id=1345214887]
 layout_mode = 2
 theme_override_constants/separation = 16
 alignment = 1
 
-[node name="Label_Option" type="Label" parent="MC_Main/VBox_Components/VBox_Settings/VBox_Visual/HBox_Option" unique_id=1832628463]
+[node name="Label_Option" type="Label" parent="MC_Settings/VBox_Components/VBox_Settings/VBox_Visual/HBox_Option" unique_id=1832628463]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_jowka")
 theme_override_font_sizes/font_size = 50
 text = "Option"
 
-[node name="CB_Option" type="CheckBox" parent="MC_Main/VBox_Components/VBox_Settings/VBox_Visual/HBox_Option" unique_id=724238600]
+[node name="CB_Option" type="CheckBox" parent="MC_Settings/VBox_Components/VBox_Settings/VBox_Visual/HBox_Option" unique_id=724238600]
 layout_mode = 2
 offset_transform_enabled = true
 offset_transform_scale = Vector2(0.7, 0.7)
 theme = ExtResource("3_nwo61")
 
-[node name="VBox_Sound" type="VBoxContainer" parent="MC_Main/VBox_Components/VBox_Settings" unique_id=244414630]
+[node name="VBox_Sound" type="VBoxContainer" parent="MC_Settings/VBox_Components/VBox_Settings" unique_id=244414630]
 layout_mode = 2
 
-[node name="Label_Sound" type="Label" parent="MC_Main/VBox_Components/VBox_Settings/VBox_Sound" unique_id=1146832548]
+[node name="Label_Sound" type="Label" parent="MC_Settings/VBox_Components/VBox_Settings/VBox_Sound" unique_id=1146832548]
 layout_mode = 2
 offset_transform_position = Vector2(0, 16)
 theme_override_fonts/font = ExtResource("2_jowka")
@@ -139,87 +141,90 @@ theme_override_font_sizes/font_size = 64
 text = "Sound"
 horizontal_alignment = 1
 
-[node name="HBox_Sound_All" type="HBoxContainer" parent="MC_Main/VBox_Components/VBox_Settings/VBox_Sound" unique_id=1659696213]
+[node name="HBox_Sound_All" type="HBoxContainer" parent="MC_Settings/VBox_Components/VBox_Settings/VBox_Sound" unique_id=1659696213]
 layout_mode = 2
 theme_override_constants/separation = 16
 alignment = 1
 
-[node name="Label_All_Header" type="Label" parent="MC_Main/VBox_Components/VBox_Settings/VBox_Sound/HBox_Sound_All" unique_id=1892280433]
+[node name="Label_All_Header" type="Label" parent="MC_Settings/VBox_Components/VBox_Settings/VBox_Sound/HBox_Sound_All" unique_id=1892280433]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_jowka")
 theme_override_font_sizes/font_size = 50
 text = "Overall"
 
-[node name="HSlider_All" type="HSlider" parent="MC_Main/VBox_Components/VBox_Settings/VBox_Sound/HBox_Sound_All" unique_id=369731879]
+[node name="HSlider_All" type="HSlider" parent="MC_Settings/VBox_Components/VBox_Settings/VBox_Sound/HBox_Sound_All" unique_id=369731879]
 custom_minimum_size = Vector2(480, 32)
 layout_mode = 2
 size_flags_vertical = 4
 theme = ExtResource("3_nwo61")
 value = 50.0
 
-[node name="Number_All" type="Label" parent="MC_Main/VBox_Components/VBox_Settings/VBox_Sound/HBox_Sound_All" unique_id=378771618]
+[node name="Number_All" type="Label" parent="MC_Settings/VBox_Components/VBox_Settings/VBox_Sound/HBox_Sound_All" unique_id=378771618]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_jowka")
 theme_override_font_sizes/font_size = 50
 text = "##%"
 
-[node name="HBox_Sound_SFX" type="HBoxContainer" parent="MC_Main/VBox_Components/VBox_Settings/VBox_Sound" unique_id=602525750]
+[node name="HBox_Sound_SFX" type="HBoxContainer" parent="MC_Settings/VBox_Components/VBox_Settings/VBox_Sound" unique_id=602525750]
 layout_mode = 2
 theme_override_constants/separation = 16
 alignment = 1
 
-[node name="Label_SFX_Header" type="Label" parent="MC_Main/VBox_Components/VBox_Settings/VBox_Sound/HBox_Sound_SFX" unique_id=387224600]
+[node name="Label_SFX_Header" type="Label" parent="MC_Settings/VBox_Components/VBox_Settings/VBox_Sound/HBox_Sound_SFX" unique_id=387224600]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_jowka")
 theme_override_font_sizes/font_size = 50
 text = "Effects"
 
-[node name="HSlider_SFX" type="HSlider" parent="MC_Main/VBox_Components/VBox_Settings/VBox_Sound/HBox_Sound_SFX" unique_id=785358713]
+[node name="HSlider_SFX" type="HSlider" parent="MC_Settings/VBox_Components/VBox_Settings/VBox_Sound/HBox_Sound_SFX" unique_id=785358713]
 custom_minimum_size = Vector2(480, 32)
 layout_mode = 2
 size_flags_vertical = 4
 theme = ExtResource("3_nwo61")
 value = 50.0
 
-[node name="Number_SFX" type="Label" parent="MC_Main/VBox_Components/VBox_Settings/VBox_Sound/HBox_Sound_SFX" unique_id=300755900]
+[node name="Number_SFX" type="Label" parent="MC_Settings/VBox_Components/VBox_Settings/VBox_Sound/HBox_Sound_SFX" unique_id=300755900]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_jowka")
 theme_override_font_sizes/font_size = 50
 text = "##%"
 
-[node name="HBox_Sound_MFX" type="HBoxContainer" parent="MC_Main/VBox_Components/VBox_Settings/VBox_Sound" unique_id=757271969]
+[node name="HBox_Sound_MFX" type="HBoxContainer" parent="MC_Settings/VBox_Components/VBox_Settings/VBox_Sound" unique_id=757271969]
 layout_mode = 2
 theme_override_constants/separation = 16
 alignment = 1
 
-[node name="Label_MFX" type="Label" parent="MC_Main/VBox_Components/VBox_Settings/VBox_Sound/HBox_Sound_MFX" unique_id=329775385]
+[node name="Label_MFX" type="Label" parent="MC_Settings/VBox_Components/VBox_Settings/VBox_Sound/HBox_Sound_MFX" unique_id=329775385]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_jowka")
 theme_override_font_sizes/font_size = 50
 text = "Music"
 
-[node name="HSlider_MFX" type="HSlider" parent="MC_Main/VBox_Components/VBox_Settings/VBox_Sound/HBox_Sound_MFX" unique_id=579541783]
+[node name="HSlider_MFX" type="HSlider" parent="MC_Settings/VBox_Components/VBox_Settings/VBox_Sound/HBox_Sound_MFX" unique_id=579541783]
 custom_minimum_size = Vector2(480, 32)
 layout_mode = 2
 size_flags_vertical = 4
 theme = ExtResource("3_nwo61")
 value = 50.0
 
-[node name="Number_MFX" type="Label" parent="MC_Main/VBox_Components/VBox_Settings/VBox_Sound/HBox_Sound_MFX" unique_id=1441930024]
+[node name="Number_MFX" type="Label" parent="MC_Settings/VBox_Components/VBox_Settings/VBox_Sound/HBox_Sound_MFX" unique_id=1441930024]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_jowka")
 theme_override_font_sizes/font_size = 50
 text = "##%"
 
-[node name="VBox_Buttons" type="VBoxContainer" parent="MC_Main/VBox_Components" unique_id=652553662]
+[node name="VBox_Buttons" type="VBoxContainer" parent="MC_Settings/VBox_Components" unique_id=652553662]
 custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 theme = ExtResource("3_nwo61")
 theme_override_constants/separation = 16
 
-[node name="Button_Leave" type="Button" parent="MC_Main/VBox_Components/VBox_Buttons" unique_id=1893636185]
+[node name="Button_Leave" type="Button" parent="MC_Settings/VBox_Components/VBox_Buttons" unique_id=1893636185]
 custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
 theme = ExtResource("3_nwo61")
 text = "Leave"
+
+[connection signal="toggled" from="MC_Settings/VBox_Components/VBox_Settings/VBox_Visual/HBox_Fullscreen/CB_Fullscreen" to="." method="_on_cb_fullscreen_toggled"]
+[connection signal="pressed" from="MC_Settings/VBox_Components/VBox_Buttons/Button_Leave" to="." method="_on_button_leave_pressed"]

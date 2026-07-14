@@ -1,0 +1,125 @@
+[gd_scene format=3 uid="uid://bxrrhaucxn02b"]
+
+[ext_resource type="Script" uid="uid://daoci56xv65do" path="res://scenes/menu/gameover/menu_gameover.gd" id="1_kffl0"]
+[ext_resource type="FontFile" uid="uid://d4b72cscrvyt5" path="res://assets/fonts/brand/Quicksand-Bold.ttf" id="2_kevb1"]
+[ext_resource type="FontFile" uid="uid://bk2hnncwxg2oe" path="res://assets/fonts/brand/Quicksand-Medium.ttf" id="3_q78fy"]
+[ext_resource type="Theme" uid="uid://cjfq6l5xes4ra" path="res://assets/themes/menu/menu.tres" id="4_am6tl"]
+
+[node name="MenuGameOver" type="Control" unique_id=1396044059]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_kffl0")
+
+[node name="MC_Gameover" type="MarginContainer" parent="." unique_id=1365604503]
+custom_minimum_size = Vector2(1920, 1080)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 64
+theme_override_constants/margin_top = 64
+theme_override_constants/margin_right = 64
+theme_override_constants/margin_bottom = 64
+
+[node name="VBox_Components" type="VBoxContainer" parent="MC_Gameover" unique_id=33715671]
+layout_mode = 2
+theme_override_constants/separation = 25
+alignment = 1
+
+[node name="Label_Header" type="Label" parent="MC_Gameover/VBox_Components" unique_id=1386907803]
+layout_mode = 2
+offset_transform_enabled = true
+offset_transform_position = Vector2(0, 16)
+theme_override_fonts/font = ExtResource("2_kevb1")
+theme_override_font_sizes/font_size = 96
+text = "GAMEOVER"
+horizontal_alignment = 1
+
+[node name="VBox_Score" type="VBoxContainer" parent="MC_Gameover/VBox_Components" unique_id=223760149]
+layout_mode = 2
+theme_override_constants/separation = -12
+
+[node name="Label_Visual" type="Label" parent="MC_Gameover/VBox_Components/VBox_Score" unique_id=1844556235]
+layout_mode = 2
+offset_transform_position = Vector2(0, 16)
+theme_override_fonts/font = ExtResource("2_kevb1")
+theme_override_font_sizes/font_size = 64
+text = "Score"
+horizontal_alignment = 1
+
+[node name="HBox_Score1" type="HBoxContainer" parent="MC_Gameover/VBox_Components/VBox_Score" unique_id=1332159669]
+layout_mode = 2
+theme_override_constants/separation = 16
+alignment = 1
+
+[node name="Label_Score1" type="Label" parent="MC_Gameover/VBox_Components/VBox_Score/HBox_Score1" unique_id=960119399]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_q78fy")
+theme_override_font_sizes/font_size = 50
+text = "Score1"
+
+[node name="Number_Score1" type="Label" parent="MC_Gameover/VBox_Components/VBox_Score/HBox_Score1" unique_id=250622008]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_q78fy")
+theme_override_font_sizes/font_size = 50
+text = "#####"
+
+[node name="HBox_Score2" type="HBoxContainer" parent="MC_Gameover/VBox_Components/VBox_Score" unique_id=1345214887]
+layout_mode = 2
+theme_override_constants/separation = 16
+alignment = 1
+
+[node name="Label_Score2" type="Label" parent="MC_Gameover/VBox_Components/VBox_Score/HBox_Score2" unique_id=1832628463]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_q78fy")
+theme_override_font_sizes/font_size = 50
+text = "Score2"
+
+[node name="Number_Score2" type="Label" parent="MC_Gameover/VBox_Components/VBox_Score/HBox_Score2" unique_id=773369385]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_q78fy")
+theme_override_font_sizes/font_size = 50
+text = "#####"
+
+[node name="HBox_Score3" type="HBoxContainer" parent="MC_Gameover/VBox_Components/VBox_Score" unique_id=1704900777]
+layout_mode = 2
+theme_override_constants/separation = 16
+alignment = 1
+
+[node name="Label_Score3" type="Label" parent="MC_Gameover/VBox_Components/VBox_Score/HBox_Score3" unique_id=1661169060]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_q78fy")
+theme_override_font_sizes/font_size = 50
+text = "Score3"
+
+[node name="Number_Score3" type="Label" parent="MC_Gameover/VBox_Components/VBox_Score/HBox_Score3" unique_id=803816002]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_q78fy")
+theme_override_font_sizes/font_size = 50
+text = "#####"
+
+[node name="VBox_Buttons" type="HBoxContainer" parent="MC_Gameover/VBox_Components" unique_id=2091930401]
+layout_mode = 2
+theme_override_constants/separation = 32
+alignment = 1
+
+[node name="Button_Play" type="Button" parent="MC_Gameover/VBox_Components/VBox_Buttons" unique_id=1893636185]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme = ExtResource("4_am6tl")
+text = "Try Again"
+
+[node name="Button_Exit" type="Button" parent="MC_Gameover/VBox_Components/VBox_Buttons" unique_id=468123691]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme = ExtResource("4_am6tl")
+text = "Leave"
+
+[connection signal="pressed" from="MC_Gameover/VBox_Components/VBox_Buttons/Button_Play" to="." method="_on_button_play_pressed"]
+[connection signal="pressed" from="MC_Gameover/VBox_Components/VBox_Buttons/Button_Exit" to="." method="_on_button_exit_pressed"]

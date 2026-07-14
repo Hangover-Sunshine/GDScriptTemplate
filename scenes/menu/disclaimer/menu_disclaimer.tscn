@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c4fhq77wd2p7q"]
 
 [ext_resource type="FontFile" uid="uid://d4b72cscrvyt5" path="res://assets/fonts/brand/Quicksand-Bold.ttf" id="1_b2mox"]
+[ext_resource type="Script" uid="uid://3u6t2gskd2ix" path="res://scenes/menu/disclaimer/menu_disclaimer.gd" id="1_xlnbf"]
 [ext_resource type="FontFile" uid="uid://bfafpfpixsbvq" path="res://assets/fonts/brand/Quicksand-Regular.ttf" id="2_55v7k"]
 [ext_resource type="FontFile" uid="uid://2ijoap0bi75w" path="res://assets/fonts/brand/Quicksand-SemiBold.ttf" id="3_xlnbf"]
 [ext_resource type="Texture2D" uid="uid://t5lws023bp4e" path="res://assets/particles/key.png" id="4_55v7k"]
@@ -146,6 +147,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_xlnbf")
 
 [node name="MC_Disclaim" type="MarginContainer" parent="." unique_id=1365604503]
 custom_minimum_size = Vector2(1920, 1080)
@@ -232,3 +234,5 @@ horizontal_alignment = 1
 libraries/ = SubResource("AnimationLibrary_kggkm")
 autoplay = &"FadeIn"
 speed_scale = 0.75
+
+[connection signal="animation_finished" from="AP_Labels" to="." method="_on_ap_labels_animation_finished"]

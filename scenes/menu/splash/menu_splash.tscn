@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cym22gqo0ol8f"]
 
 [ext_resource type="FontFile" uid="uid://d4b72cscrvyt5" path="res://assets/fonts/brand/Quicksand-Bold.ttf" id="1_gc4m4"]
+[ext_resource type="Script" uid="uid://dpey0aq0dbeq3" path="res://scenes/menu/splash/menu_splash.gd" id="1_i56kp"]
 [ext_resource type="FontFile" uid="uid://bfafpfpixsbvq" path="res://assets/fonts/brand/Quicksand-Regular.ttf" id="2_i56kp"]
 [ext_resource type="FontFile" uid="uid://2ijoap0bi75w" path="res://assets/fonts/brand/Quicksand-SemiBold.ttf" id="3_slkr4"]
 
@@ -97,6 +98,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_i56kp")
 
 [node name="MC_Splash" type="MarginContainer" parent="." unique_id=1365604503]
 custom_minimum_size = Vector2(1920, 1080)
@@ -181,3 +183,5 @@ horizontal_alignment = 2
 libraries/ = SubResource("AnimationLibrary_gc4m4")
 autoplay = &"FadeIn"
 speed_scale = 0.75
+
+[connection signal="animation_finished" from="AP_Labels" to="." method="_on_ap_labels_animation_finished"]
