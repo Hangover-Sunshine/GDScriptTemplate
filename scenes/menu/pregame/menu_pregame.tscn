@@ -1,0 +1,136 @@
+[gd_scene format=3 uid="uid://do140epa37ah8"]
+
+[ext_resource type="Script" uid="uid://d3chp56nrn6jx" path="res://scenes/menu/pregame/menu_pregame.gd" id="1_ae0d5"]
+[ext_resource type="FontFile" uid="uid://bfafpfpixsbvq" path="res://assets/fonts/brand/Quicksand-Regular.ttf" id="2_vmpyd"]
+[ext_resource type="FontFile" uid="uid://d4b72cscrvyt5" path="res://assets/fonts/brand/Quicksand-Bold.ttf" id="3_em2tk"]
+[ext_resource type="Theme" uid="uid://cjfq6l5xes4ra" path="res://assets/themes/menu/menu.tres" id="4_sbbvh"]
+
+[node name="MenuPregame" type="Control" unique_id=1396044059]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ae0d5")
+
+[node name="MC_Brand" type="MarginContainer" parent="." unique_id=1422787208]
+custom_minimum_size = Vector2(1920, 1080)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 64
+theme_override_constants/margin_top = 64
+theme_override_constants/margin_right = 64
+theme_override_constants/margin_bottom = 64
+
+[node name="VBox_Brand" type="VBoxContainer" parent="MC_Brand" unique_id=545991425]
+layout_mode = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="Label_Brand" type="Label" parent="MC_Brand/VBox_Brand" unique_id=1548104801]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_vmpyd")
+theme_override_font_sizes/font_size = 48
+text = "v1.0 | HANGOVER SUNSHINE"
+
+[node name="VBox_Gap" type="VBoxContainer" parent="MC_Brand/VBox_Brand" unique_id=1166481949]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="Label_Jam" type="Label" parent="MC_Brand/VBox_Brand" unique_id=692615877]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_vmpyd")
+theme_override_font_sizes/font_size = 48
+text = "JAM EDITION (name)"
+horizontal_alignment = 2
+
+[node name="MC_Pregame" type="MarginContainer" parent="." unique_id=1365604503]
+custom_minimum_size = Vector2(1920, 1080)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 64
+theme_override_constants/margin_top = 64
+theme_override_constants/margin_right = 64
+theme_override_constants/margin_bottom = 64
+
+[node name="VBox_Components" type="VBoxContainer" parent="MC_Pregame" unique_id=33715671]
+layout_mode = 2
+theme_override_constants/separation = 48
+alignment = 1
+
+[node name="Label_Header" type="Label" parent="MC_Pregame/VBox_Components" unique_id=1386907803]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_em2tk")
+theme_override_font_sizes/font_size = 100
+text = "Instructions"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MC_Pregame/VBox_Components" unique_id=366231991]
+layout_mode = 2
+
+[node name="VBox_Buttons" type="VBoxContainer" parent="MC_Pregame/VBox_Components/HBoxContainer" unique_id=652553662]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("4_sbbvh")
+theme_override_constants/separation = 16
+
+[node name="Button_Play" type="Button" parent="MC_Pregame/VBox_Components/HBoxContainer/VBox_Buttons" unique_id=1589387770]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme = ExtResource("4_sbbvh")
+text = "Play"
+
+[node name="Button_Exit" type="Button" parent="MC_Pregame/VBox_Components/HBoxContainer/VBox_Buttons" unique_id=1893636185]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme = ExtResource("4_sbbvh")
+text = "Back"
+
+[node name="HBox_Empty" type="HBoxContainer" parent="MC_Pregame/VBox_Components/HBoxContainer" unique_id=733713470]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBox_Slides" type="HBoxContainer" parent="MC_Pregame/VBox_Components/HBoxContainer" unique_id=1980903702]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/separation = 16
+
+[node name="Button_Skip" type="Button" parent="MC_Pregame/VBox_Components/HBoxContainer/HBox_Slides" unique_id=441697398]
+custom_minimum_size = Vector2(450, 64)
+layout_mode = 2
+theme = ExtResource("4_sbbvh")
+text = "Skip To Controls"
+
+[node name="Button_Left" type="Button" parent="MC_Pregame/VBox_Components/HBoxContainer/HBox_Slides" unique_id=231438293]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+theme = ExtResource("4_sbbvh")
+text = "<"
+
+[node name="Number_Slide" type="Label" parent="MC_Pregame/VBox_Components/HBoxContainer/HBox_Slides" unique_id=1328591171]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_vmpyd")
+theme_override_font_sizes/font_size = 50
+text = "1/#"
+
+[node name="Button_Right" type="Button" parent="MC_Pregame/VBox_Components/HBoxContainer/HBox_Slides" unique_id=108300555]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+theme = ExtResource("4_sbbvh")
+text = ">"
+
+[connection signal="pressed" from="MC_Pregame/VBox_Components/HBoxContainer/VBox_Buttons/Button_Play" to="." method="_on_button_play_pressed"]
+[connection signal="pressed" from="MC_Pregame/VBox_Components/HBoxContainer/VBox_Buttons/Button_Exit" to="." method="_on_button_exit_pressed"]
