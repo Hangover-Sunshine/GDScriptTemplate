@@ -16,10 +16,15 @@ config/features=PackedStringArray("4.7", "GL Compatibility")
 boot_splash/bg_color=Color(0.06469657, 0.06469652, 0.0646965, 1)
 config/icon="uid://vnjl0l0d0qw6"
 
+[audio]
+
+buses/default_bus_layout="uid://rmcookth5pxl"
+
 [autoload]
 
 PlayerPrefs="*uid://ybfjx38p6i0s"
 GameSettings="*uid://bgwwxsdschogc"
+SceneLoader="*uid://cuhgbb4fjwvcs"
 
 [display]
 
